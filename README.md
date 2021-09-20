@@ -78,31 +78,31 @@ Post запрос на api/v1/users/
 }
 
 ответ:
-
+```
 {
     "email": "",
     "username": "user_1",
     "id": 4
 }
-
+```
 ### Получение JWT токена:
 
 Post запрос на api/v1/jwt/create/
 
 в теле запроса передаем:
-
+```
 {
     "username": "user_1",
     "password": "password_1"
 }
-
+```
 ответ:
-
+```
 {
     "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzMjIyMjQzMywianRpIjoiODhkYjU3MmQzNmY2NDlmMmI0YzNlYjg3MzAxZTczNGEiLCJ1c2VyX2lkIjo0fQ.JMBrHFOUmXsf5hNI5MSJoX1GCGtV4hChVQLFVbE9L2k",
     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMyMjIyNDMzLCJqdGkiOiI1MDBjNjU3NjQwOWM0ZGZiODAzNmI3Mzk3YjRlZWM5YSIsInVzZXJfaWQiOjR9.FrdAum5zJmGGjxhHxjvZ0HzrtUTVy4PhBSp7sphtnuo"
 }
-
+```
 токен передается в поле access
 
 
@@ -111,13 +111,13 @@ Post запрос на api/v1/jwt/create/
 Post запрос на api/v1/posts/
 
 в теле запроса передаем:
-
+```
 {
     "text": "text_post"
 }
-
+```
 ответ:
-
+```
 {
     "id": 1,
     "author": "author_1",
@@ -126,19 +126,20 @@ Post запрос на api/v1/posts/
     "image": null,
     "group": null
 } 
-
+```
 ### Создание комментария:
 
 Post запрос на api/v1/posts/{post_id}/comments/
 
 в теле запроса передаем:
+```
 {
     "text": "text_post_comment",
     "post": "1"
 }
-
+```
 ответ:
-
+```
 {
     "id": 1,
     "author": "author_1",
@@ -146,20 +147,21 @@ Post запрос на api/v1/posts/{post_id}/comments/
     "created": "2021-09-20T11:33:11.884710Z",
     "post": 1
 }
-
+```
 # Создание подписки:
 
 Post запрос на api/v1/follow/
 
 в теле запроса передаем:
-
+```
 {
     "following": "author_1"
 }
-
+```
 ответ (author_2 подписался на author_1):
-
+```
 {
     "user": "author_2",
     "following": "author_1"
 }
+```
