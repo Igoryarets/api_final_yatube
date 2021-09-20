@@ -1,6 +1,12 @@
 from django.shortcuts import get_object_or_404
+<<<<<<< HEAD
 from posts.models import Comment, Follow, Group, Post
 from rest_framework import filters, mixins, permissions, viewsets
+=======
+from rest_framework import filters, permissions, viewsets
+
+from posts.models import Comment, Follow, Group, Post
+>>>>>>> f23526aa0ea131dab79d344eb1ff4e83908985cc
 
 from .permissions import IsAuthorOrReadOnly
 from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
@@ -35,11 +41,15 @@ class CommentViewSet(viewsets.ModelViewSet):
         serializer.save(author=self.request.user, post=post)
 
 
+<<<<<<< HEAD
 class FollowViewSet(
     mixins.CreateModelMixin,
     mixins.ListModelMixin,
     viewsets.GenericViewSet
 ):
+=======
+class FollowViewSet(viewsets.ModelViewSet):
+>>>>>>> f23526aa0ea131dab79d344eb1ff4e83908985cc
     serializer_class = FollowSerializer
     permission_classes = [permissions.IsAuthenticated]
 
