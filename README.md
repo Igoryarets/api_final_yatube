@@ -148,7 +148,7 @@ Post запрос на api/v1/posts/{post_id}/comments/
     "post": 1
 }
 ```
-# Создание подписки:
+### Создание подписки:
 
 Post запрос на api/v1/follow/
 
