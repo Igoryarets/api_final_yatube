@@ -71,12 +71,12 @@ python manage.py runserver
 Post запрос на api/v1/users/ 
 
 в теле запроса передаем:
-
+```
 {
     "username": "user_1",
     "password": "password_1"
 }
-
+```
 ответ:
 ```
 {
